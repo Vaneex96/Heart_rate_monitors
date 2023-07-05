@@ -1,0 +1,28 @@
+.carousel {
+  padding-top: 108px;
+  &__slider {
+    display: flex;
+    align-items: center;
+    height: 527px;
+    &__inner {
+      min-height: 580px;
+    }
+  }
+  &__button {
+    // width: 31px;
+    // height: 50px;
+    border-radius: 5px;
+    background-color: white;
+
+    color: #c70101;
+    font-size: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: none;
+  }
+  img {
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 100%;
+  }
+}

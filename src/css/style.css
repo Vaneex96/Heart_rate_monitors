@@ -7,6 +7,30 @@
   margin: 0 auto;
 }
 
+.faded {
+  -webkit-animation-name: faded;
+          animation-name: faded;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+
+@-webkit-keyframes faded {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes faded {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .promo {
   min-height: 650px;
   padding-top: 24px;
@@ -264,6 +288,36 @@
 }
 .feed-form input:nth-child(3) {
   margin-bottom: 20px;
+}
+
+.carousel {
+  padding-top: 108px;
+}
+.carousel__slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 527px;
+}
+.carousel__slider__inner {
+  min-height: 580px;
+}
+.carousel__button {
+  border-radius: 5px;
+  background-color: white;
+  color: #c70101;
+  font-size: 50px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: none;
+}
+.carousel img {
+  margin-left: 20px;
+  margin-right: 20px;
+  height: 100%;
 }
 
 @media (max-width: 1024px) {
