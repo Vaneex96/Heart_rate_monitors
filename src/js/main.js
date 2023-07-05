@@ -155,7 +155,7 @@ window.addEventListener("DOMContentLoaded", () => {
       // dots[slideIndex - 1].style.opacity = 1;
     });
 
-    prev.addEventListener("click", () => {
+    prev.addEventListener("click", (e) => {
       if (offset == 0) {
         offset = deleteNotDigits(width) * (slides.length - 1);
       } else {
@@ -209,4 +209,54 @@ window.addEventListener("DOMContentLoaded", () => {
     wrapper: ".carousel__wrapper",
     field: ".carousel__slider__inner",
   });
+
+  const transition = () => {
+    const more = document.querySelectorAll(".catalog-item__link"),
+      back = document.querySelectorAll(".catalog-item__link__back"),
+      content = document.querySelectorAll(".catalog-item__content"),
+      list = document.querySelectorAll(".catalog-item__list");
+
+    more.forEach((item, i) => {
+      item.addEventListener("click", (e) => {
+        e.preventDefault();
+        content[i].classList.remove("catalog-item__content_active");
+        list[i].classList.add("catalog-item__list_active");
+      });
+    });
+
+    back.forEach((item, i) => {
+      item.addEventListener("click", (e) => {
+        e.preventDefault();
+        list[i].classList.remove("catalog-item__list_active");
+        content[i].classList.add("catalog-item__content_active");
+      });
+    });
+  };
+
+  transition();
+
+  const tabs = () => {
+    const tabs = document.querySelectorAll(".catalog__tab"),
+      catalogContent = document.querySelectorAll(".catalog__content");
+
+    tabs.forEach((item, i) => {
+      item.addEventListener("click", (e) => {
+        // console.log("lox");
+        e.preventDefault();
+        // const target = e.target;
+        // console.log(target);
+        tabs.forEach((item) => {
+          item.classList.remove("catalog__tab_active");
+        });
+
+        tabs[i].classList.add("catalog__tab_active");
+
+        catalogContent.forEach((item) => {
+          item.classList.remove("catalog__content_active");
+        });
+        catalogContent[i].classList.add("catalog__content_active");
+      });
+    });
+  };
+  tabs();
 });

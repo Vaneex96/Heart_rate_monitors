@@ -1,28 +1,34 @@
 .carousel {
   padding-top: 108px;
+  min-height: 740px;
+  &__wrapper {
+    width: 750px;
+    height: 420px;
+  }
   &__slider {
     display: flex;
     align-items: center;
-    height: 527px;
-    &__inner {
-      min-height: 580px;
-    }
   }
   &__button {
-    // width: 31px;
-    // height: 50px;
+    // width: 77px;
     border-radius: 5px;
     background-color: white;
-
     color: #c70101;
     font-size: 50px;
     font-weight: 700;
     text-transform: uppercase;
     border: none;
+    margin: 0 20px 0 20px;
+    cursor: pointer;
+    &:focus {
+      outline: 0;
+      outline-offset: 0;
+    }
+    &:active {
+      color: whitesmoke;
+    }
   }
   img {
-    margin-left: 20px;
-    margin-right: 20px;
-    height: 100%;
+    height: 422px;
   }
 }

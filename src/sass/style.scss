@@ -2,6 +2,9 @@
 * {
   font-family: "Museo Sans Cyrl", sans-serif;
 }
+.button {
+  cursor: pointer;
+}
 
 .container {
   max-width: 950px;
@@ -28,6 +31,7 @@
 @import "blocks/consultation";
 @import "blocks/forms";
 @import "blocks/carousel";
+@import "blocks/catalog";
 
 @media (max-width: 1024px) {
   .advantages {
