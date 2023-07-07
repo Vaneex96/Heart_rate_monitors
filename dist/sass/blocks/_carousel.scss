@@ -1,0 +1,34 @@
+.carousel {
+  padding-top: 108px;
+  min-height: 740px;
+  &__wrapper {
+    width: 750px;
+    height: 420px;
+  }
+  &__slider {
+    display: flex;
+    align-items: center;
+  }
+  &__button {
+    // width: 77px;
+    border-radius: 5px;
+    background-color: white;
+    color: #c70101;
+    font-size: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: none;
+    margin: 0 20px 0 20px;
+    cursor: pointer;
+    &:focus {
+      outline: 0;
+      outline-offset: 0;
+    }
+    &:active {
+      color: whitesmoke;
+    }
+  }
+  img {
+    height: 422px;
+  }
+}
